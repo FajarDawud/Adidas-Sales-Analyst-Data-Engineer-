@@ -1,0 +1,30 @@
+url : https://www.kaggle.com/datasets/heemalichaudhari/adidas-sales-dataset
+
+syntax sql:
+CREATE TABLE table_m3 (
+    retailer TEXT,
+    region TEXT,
+    country TEXT,
+    state TEXT,
+    city TEXT,
+    product TEXT,
+    price_per_unit NUMERIC,
+    units_sold INTEGER,
+    total_sales NUMERIC,
+    operating_profit NUMERIC,
+    date DATE
+);
+
+
+syntax python :
+import pandas as pd
+from sqlalchemy import create_engine
+
+# 1. Baca CSV
+df = pd.read_csv("P2M3_Fajar_Dawud_data_raw.csv")
+
+# 2. Buat koneksi PostgreSQL
+engine = create_engine("postgresql://airflow:airflow@localhost:5434/airflow")
+
+# 3. Kirim data ke table_m3
+df.to_sql("table_m3", engine, if_exists="replace", index=False)

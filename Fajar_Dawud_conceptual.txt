@@ -1,0 +1,113 @@
+Jelaskan apa yang dimaksud dengan NoSQL menggunakan pemahaman yang kalian ketahui !
+
+Jelaskan kapan harus menggunakan NoSQL dan Relational Database Management System !
+
+Sebutkan contoh 2 tools/platform NoSQL selain ElasticSearch beserta keunggulan tools/platform tersebut !
+
+Jelaskan apa yang Anda ketahui dari Airflow menggunakan pemahaman dan bahasa Anda sendiri !
+
+Jelaskan apa yang Anda ketahui dari Great Expectations menggunakan pemahaman dan bahasa Anda sendiri !
+
+Jelaskan apa yang Anda ketahui dari Batch Processing menggunakan pemahaman dan bahasa Anda sendiri (Definisi, Contoh Kasus Penggunaan, Tools, dll) !
+
+
+
+ANSWER :
+
+1. NoSQL yaitu singkat dari NotOnly SQL yang artinya tidak menggunakan struktur tabel relational seperti RDBMS.
+NoSQL di desain untuk menangani data dalam jumlah besar yang sifatnya tidak terstruktur atau semi-struktur, serta mendukung fleksibilitas skema 
+skema dan skalabilitas horizontal.
+Ciri khas NoSQL:
+- Skema fleksibel (tidak kaku)
+- Cocok untuk data besar dan real time
+- Bisa berupa dokumen, key-value, graph, atau wide-column.
+
+2. - Ketika data tidak terstruktur/semi-strutur (misal JSON, dokumen)
+   - Ketika skalabilitas tinggi & performa cepat untuk big data
+   - Ketika tidak ada relasi atau minim relasi antar data
+   - Contoh : MongoDB, Cassandra
+
+3. a. MongoDB
+Tipe: Document-oriented
+
+Menyimpan data dalam format JSON/BSON.
+
+Keunggulan:
+
+Skema fleksibel.
+
+Mendukung query kompleks seperti agregasi.
+
+Mudah diintegrasikan dengan aplikasi modern.
+
+b. Apache 
+Tipe: Wide-column store
+
+Dirancang untuk distribusi data skala besar secara horizontal.
+
+Keunggulan:
+
+High availability & fault-tolerant.
+
+Cocok untuk aplikasi real-time dengan jumlah data besar (misalnya: sistem sensor, media sosial).
+
+
+4. Airflow adalah platform open-source yang digunakan untuk mengatur, menjadwalkan, dan memantau alur kerja/data pipeline secara otomatis.
+
+Pemahaman mudah:
+
+Airflow = "Tukang jadwal + pengatur tugas data."
+
+Kita bisa membuat alur kerja (DAGs) seperti ETL pipeline, training model, validasi data, dll.
+
+Ditulis dengan Python, fleksibel dan powerful.
+
+Contoh Penggunaan:
+
+Jadwalkan ETL harian (Extract dari database, Transform, Load ke data warehouse).
+
+Menyusun langkah-langkah machine learning pipeline.
+
+
+5. Great Expectations (GE) adalah library open-source untuk validasi data secara otomatis.
+
+Fungsi utamanya:
+
+Mengecek apakah data sesuai harapan/aturan yang ditentukan (expectations).
+
+Bisa deteksi data corrupt atau salah format sebelum diproses.
+
+Contoh Penggunaan:
+
+Pastikan kolom "umur" tidak ada yang negatif.
+
+Cek apakah kolom "tanggal" dalam format yang valid.
+
+Digunakan dalam pipeline ETL atau saat load data besar ke warehouse.
+
+
+6. Definisi:
+Batch processing adalah metode pengolahan data dalam kumpulan besar sekaligus (batch) dalam satu waktu, bukan secara real-time.
+
+Contoh Kasus Penggunaan:
+Menghitung total penjualan setiap akhir hari.
+
+Memproses data sensor dari ribuan perangkat sekaligus.
+
+Generate laporan mingguan dari database.
+
+Tools yang sering digunakan:
+Apache Spark
+
+Apache Hadoop
+
+AWS Batch
+
+Azure Data Factory
+
+Keunggulan:
+Efisien untuk jumlah data besar.
+
+Cocok untuk job yang bisa ditunda (tidak butuh instan).
+
+Biaya bisa lebih murah daripada stream processing.
